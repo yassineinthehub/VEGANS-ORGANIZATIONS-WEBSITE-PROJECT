@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="styles.css">
+ <title>Plants</title>
+ <style>
+ @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: "DM Serif Display", sans-serif;
+   font-weight: bold;
+ }
+ body {
+   background-color: #f8fff8;
+   padding: 0;
+   margin: 0;
+ }
+ .header {
+   background-color: #094c59;
+   background-size: cover;
+   padding: 20px;
+   z-index: 10;
+   position: relative;
+ }
+ nav {
+   margin: 30px 10px;
+   font-size: 22px;
+   border-bottom: 1px solid #f8fff8;
+   height: 50px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+ }
+ .logo {
+   height: 50px;
+   width: 40px;
+   text-align: center;
+   font-size: 19px;
+ }
+ .nav-s {
+   display: flex;
+   align-items: center;
+ }
+ .nav-s ul {
+   list-style-type: none;
+   display: flex;
+ }
+ .nav-s ul li {
+   padding: 5px 10px;
+ }
+ .nav-s a {
+   color: #b8e68a;
+   text-decoration: none;
+ }
+ .h-main {
+   color: #f6fbf0;
+   margin: 20px auto;
+   display: flex;
+   flex-direction: column; 
+   padding-top: 150px;
+   line-height: 1.0;
+ }
+ .first-p {
+   font-size: 8rem;
+   text-indent: 50px;
+   flex:auto;
+ }
+ .second-p {
+   font-size: 12rem;
+   color: #b8e68a;
+   text-indent: 50px;
+   flex:auto;
+ }
+ .summary{
+  color: #f8fff8;
+  font-size: medium;
+  margin-top: 90px;
+  margin: 20px 40px;
+  line-height: 2.0;
+  margin-bottom: 60px;
+ }
+ .inf-under {
+   border-top: 1px solid #f8fff8;
+   color: white;
+   display: flex; 
+   align-items: center;
+   justify-content: center; 
+   margin-top: 100px;
+   padding-bottom: 2px;
+   padding-top: 9px;
+ }
+ .inf-under h6 {
+   font-size: 1.5rem;
+   margin-right: 10px; 
+   text-decoration: none;
+   list-style-type: none;
+ }
+ main {
+   padding: 20px;
+   margin: 20px auto;
+   border-radius: 10px;
+   width: 90%;
+   max-width: 1200px;
+ }
+ article {
+   width: 100%;
+ }
+ article h1{
+  font-size: 70px;
+  border-bottom: #2a889b 2px solid;
+  color: #175d6b;
+  margin-bottom: 70px;
+  margin-top: 70px;
+}
+section h1{
+  display: flex; 
+  text-align: center;
+}
+ section.we {
+   text-align: center;
+   margin-bottom: 20px;
+ }
+ .pare-we {
+   font-size: 1.2rem;
+   margin: 20px 0;
+ }
+ section.infor {
+   display: flex; 
+   justify-content: space-around;
+   flex-wrap: wrap;
+ }
+ figure {
+   max-width: 300px;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 9px;
+   background-color: #e6eced;
+   margin: 10px;
+   flex: 1;
+ }
+ figure img {
+   width: 100%; 
+   height: auto;
+   border-radius: 5px;
+ }
+ figure p {
+   margin: 5px; 
+ }
+ table {
+   border-collapse: collapse;
+   width: 100%;
+   margin-top: 20px;
+   margin-bottom: 20px;
+ }
+ th, td {
+   border: 1px solid black;
+   border-radius: 10px;
+   padding: 10px;
+ }
+ th {
+   text-align: left;
+ }
+ table a{
+ color: #094c59;
+ }
+ caption {
+   padding: 10px;
+   font-size: 1.5rem;
+ }
+ footer {
+    background-color: #094c59;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+ a {
+   text-decoration: none;
+   color: white;
+ }
+ </style>
+</head>
+<body>
+<header class="header">
+  <div class="header-container">
+     <nav>
+       <a href="#" class="logo">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAxJJREFUSEu9lU9oFVcUxr/vGt/G9D0XrbbWQioESwsNnTmDUGsttIvSxoWC1RSysN3E0GblSi2F0lZEXJRQoZuK0oKItYL/NkJElMbMvRNDeOLCTWgVcWFb/JOIL/fofcyTZ/J8SUviLO/9Zn73nO87d4h5fjjP38djgLV2P4AyyYvFYnGovb39/lzAqwBVNc65CvAYqABuABgjed97T5LLALwC4F8A1wFYVT1K8oyIPHjaYaqAwcHBYktLS3gxQK4AeBXAollWcA3AFyJyrJF+KuCOiDwXhFmWvVCpVNpIVkGFQuFyR0fHzZGRkSWVSmWF9/5dkp0A1oR9kj8Xi8Xeqa2tAsrlcmF8fLzW80KzkqeeMk3Tz0n+kFfcLyJ99Zp6k/8BUDLGtEVRNFYTWWtD24IfoRXnSR6LougCSV/TZFnW4b2/BCCYtTKO46u1vXpABuAtVf04SZJTNcHQ0NCLj4x8xxjzgapuCd0KPhljuqMosjWdc+6sqq4F0Cci/dMAzrmDqtoN4BsR+bqRYcEX7/1XAL4M4SO5M47j74PWWvspgF9JHorjuKtRBVsB7FPVP5IkebtZgtI03UzyIICFJLvjOP7FWrsqBBLA7yKyoRHgJQB/AlhgjHkjiqLLzSBZlr3vvT8NYJLkKu/9ApKhzUdEZOM0QFhI0/Q3koF+WEQ2zTQHzrlvVXUHgIuquo/kgae2KAesJnk+/3CniJxsBrHWlgD8BaA1T9nLqtqTJMlPDSvIzToKYD2Au8aYj6IoOjcD5EcAvbnmRqlUaqsftmm3aX6qYNZrAB6o6h6S34nIvUYg59yHqhq8CM+2RzfB3oaDVr8Ysm+MOQEgztfvAjhD8kKYAe/97fzyew/AJ2FAg05Vu5IkOTQjIAgGBgZaWltbe0LWASxt0qYw0bcAPA9gl4hsnxWgJgr31MTERKeqbiJZBanq7dzc0ZA4Vf2M5G4AJ0Rk3X8CzBTVsO+cCwc4DmBURN6cc0CWZa9778shqiKyfM4Bw8PDiycnJ/8GcE9EnvhRPbuf/mx6/X80DwEYGTcoS7DlmAAAAABJRU5ErkJggg=="/>
+       </a>
+       <div class="nav-s">
+         <ul>
+          <li><a href="#">Home</a></li> 
+          <li><a href="">Informations</a></li>
+          <li><a href="https://github.com/yassineinthehub">Contact</a></li>
+         </ul>
+       </div>
+     </nav>
+      <div class="h-main">
+        <p class="first-p">We call it </p>
+        <h1 class="second-p">HIGH QUALITY</h1>
+      </div>
+      <div class="inf-under">
+       <h6>Get down... don't be shy</h6>
+     </div>
+  </div>
+</header>
+ <main>
+   <article>
+     <section class="we">
+       <h1>WHO ARE WE?</h1>
+       <p class="pare-we">We connect you with high quality celebs & experts on eco-living: food, plants, diet, & more! Free advice, ask anyone!</p>
+       <h1>FEATURED ADVICED  PRODUCTS</h1>
+       <p></p>
+     </section>
+     <section class="infor">  
+       <figure class="figure1">
+         <img src="https://www.easyrecipechef.com/wp-content/uploads/2019/11/HUMMUS-RECIPE-min.jpg" alt="Hummus">
+         <figcaption class="fagc1">Hummus</figcaption>
+         <p><strong>Hummus</strong> is a delicious and nutritious dip, spread from the Middle East. Made from mashed chickpeas, tahini (sesame paste), olive oil, lemon juice, garlic, and salt.</p>
+       </figure>
+       <figure class="figure2">
+         <img src="https://www.thespruce.com/thmb/heau_pzSBP7uvvrNIqAjGGC-eaI=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1218717079-f880e51127464a51877a1bc41f918a84.jpg" alt="Euphorbia ingens">
+         <figcaption class="fagc2">Euphorbia ingens</figcaption>
+         <p><strong>The Euphorbia ingens</strong>, also commonly called the candelabra tree or naboom, is a large succulent tree native to dry areas of southern Africa. It's a popular ornamental plant due to its unique appearance and low-maintenance needs.</p>
+       </figure>
+       <figure class="figure3">
+         <img src="https://www.thespruce.com/thmb/v80R-MM4mJJoKKbQ02Ias6ANUC4=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/GettyImages-1324175205-d830124a53744d69a845ec69b27c0c26.jpg" alt="Olive Trees">
+         <figcaption class="fagc3">Olive Trees</figcaption>
+         <p><strong>Olive trees</strong> (Olea europaea) are emblematic of the Mediterranean basin, where they have been cultivated for thousands of years. They are known for their beautiful silvery green foliage, gnarled trunks, and production of olives, a delicious fruit used to make olive oil.</p>
+       </figure>
+     </section>
+     <section class="table">
+      <h1>OUR FAMOUS CONTACTS</h1>
+       <table>
+         <thead>
+           <tr>
+             <th>Identity</th>
+             <th>Status</th>
+             <th>Birth/Founding Day</th>
+             <th>Connect With Them</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>Billie Eilish - vegan</td>
+             <td>Singer</td>
+             <td>Dec, 2001</td>
+             <td><a href="mailto:info@voxusa.net">info@voxusa.net</a></td>
+           </tr>
+           <tr>
+             <td>The Vegan Society - vegans</td>
+             <td>Charity</td>
+             <td>Nov, 1944</td>
+             <td><a href="mailto:hello@vegsoc.org">hello@vegsoc.org</a></td>
+           </tr>
+           <tr>
+             <td>Tom Cruise - vegetarian</td>
+             <td>Actor</td>
+             <td>Jul, 1962</td>
+             <td><a href="tel:+1-323-684-7666">+1-323-684-7666</a></td>
+           </tr>
+         </tbody>
+       </table>
+     </section>
+   </article>
+ </main>
+ <footer> <a href="https://github.com/yassineinthehub">
+  The rest of us
+</a>
+</footer>
+</body>
+</html>
